@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import floralBackground from "@/assets/floral-background.jpg";
-import profilePhoto from "@/assets/profile-photo.png";
-import privacyLogo from "@/assets/privacy-logo.png";
-import tiktokLogo from "@/assets/tiktok-logo.png";
+// import floralBackground from "@/assets/floral-background.jpg";
+// import profilePhoto from "@/assets/profile-photo.png";
+// import privacyLogo from "@/assets/privacy-logo.png";
+// import tiktokLogo from "@/assets/tiktok-logo.png";
 
 interface LinkItem {
   title: string;
@@ -31,10 +31,7 @@ const LinktreeProfile = () => {
 
   return (
     <div 
-      className="min-h-screen w-full bg-orange-soft bg-cover bg-center bg-no-repeat relative"
-      style={{
-        backgroundImage: `url(${floralBackground})`
-      }}
+      className="min-h-screen w-full bg-orange-soft relative"
     >
       {/* Overlay for better readability */}
       <div className="absolute inset-0 bg-orange-soft/40"></div>
@@ -44,7 +41,7 @@ const LinktreeProfile = () => {
         {/* Profile Header */}
         <div className="text-center mb-12 animate-fade-in">
           <Avatar className="w-32 h-32 mx-auto mb-6 border-4 border-white/20 shadow-lg">
-            <AvatarImage src={profilePhoto} alt={profileName} />
+            <AvatarImage src="" alt={profileName} />
             <AvatarFallback className="text-2xl font-bold text-orange-dark bg-glass">
               {profileName.split(' ').map(n => n[0]).join('')}
             </AvatarFallback>
@@ -63,14 +60,14 @@ const LinktreeProfile = () => {
                 value="privacy" 
                 className="flex-1 text-white bg-orange-dark data-[state=active]:bg-white data-[state=active]:text-orange-dark"
               >
-                <img src={privacyLogo} alt="Privacy" className="w-5 h-5 mr-2" />
+                <span className="w-5 h-5 mr-2 bg-white/20 rounded"></span>
                 Privacy
               </TabsTrigger>
               <TabsTrigger 
                 value="tiktok"
                 className="flex-1 text-white bg-orange-dark data-[state=active]:bg-white data-[state=active]:text-orange-dark"
               >
-                <img src={tiktokLogo} alt="TikTok" className="w-5 h-5 mr-2" />
+                <span className="w-5 h-5 mr-2 bg-white/20 rounded"></span>
                 TikTok
               </TabsTrigger>
             </TabsList>
@@ -82,7 +79,7 @@ const LinktreeProfile = () => {
                 className="w-full h-14 text-lg font-semibold shadow-lg"
                 onClick={() => handleLinkClick(links[0].url)}
               >
-                <img src={privacyLogo} alt="Privacy" className="w-6 h-6 mr-3" />
+                <span className="w-6 h-6 mr-3 bg-orange-dark/20 rounded"></span>
                 {links[0].title}
               </Button>
             </TabsContent>
@@ -94,7 +91,7 @@ const LinktreeProfile = () => {
                 className="w-full h-14 text-lg font-semibold shadow-lg"
                 onClick={() => handleLinkClick(links[1].url)}
               >
-                <img src={tiktokLogo} alt="TikTok" className="w-6 h-6 mr-3" />
+                <span className="w-6 h-6 mr-3 bg-orange-dark/20 rounded"></span>
                 {links[1].title}
               </Button>
             </TabsContent>
