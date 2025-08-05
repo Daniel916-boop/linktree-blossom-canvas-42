@@ -1,24 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milena Feffers - Links</title>
     <meta name="description" content="Página de links da Milena Feffers" />
-    <meta name="author" content="Lovable" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Background overlay -->
+        <div class="overlay"></div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="avatar">
+                    <img src="assets/profile-photo.png" alt="Milena Feffers" />
+                </div>
+                <h1 class="profile-name">Milena Feffers</h1>
+                <div class="divider"></div>
+            </div>
 
-    <meta property="og:title" content="linktree-blossom-canvas" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+            <!-- Tabs Container -->
+            <div class="tabs-container">
+                <div class="tabs-list">
+                    <button class="tab-trigger active" data-tab="privacy">
+                        <img src="assets/privacy-logo.png" alt="Privacy" class="tab-icon" />
+                        Privacy
+                    </button>
+                    <button class="tab-trigger" data-tab="tiktok">
+                        <img src="assets/tiktok-logo.png" alt="TikTok" class="tab-icon" />
+                        TikTok
+                    </button>
+                </div>
+                
+                <div class="tab-content active" id="privacy">
+                    <button class="link-button" onclick="openLink('https://permissao-de-acesso.netlify.app/')">
+                        <img src="assets/privacy-logo.png" alt="Privacy" class="button-icon" />
+                        Privacy
+                    </button>
+                </div>
+                
+                <div class="tab-content" id="tiktok">
+                    <button class="link-button" onclick="openLink('https://naotemsite.com')">
+                        <img src="assets/tiktok-logo.png" alt="TikTok" class="button-icon" />
+                        TikTok
+                    </button>
+                </div>
+            </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+            <!-- Decorative Element -->
+            <div class="decorative">
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
